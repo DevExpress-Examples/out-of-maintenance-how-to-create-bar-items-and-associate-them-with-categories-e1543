@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfApplication3.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="300" Width="300" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars">
+    <Grid>
+        
+        <!--region #1-->
+        <dxb:BarManager Margin="12" Name="barManager1">
+            <!--Create a category-->
+            <dxb:BarManager.Categories>
+                <dxb:BarManagerCategory Name="Format Category"/>
+            </dxb:BarManager.Categories>
+            <!--Create a bar item-->
+            <dxb:BarManager.Items>
+                <!--Regular bar items-->
+                <dxb:BarCheckItem Content="Bold" 
+                                  x:Name="checkBtnBold" 
+                                  CheckedChanged="checkBtnBold_CheckChanged" 
+                                  Glyph="pack://application:,,,/Images/bold16x16.png"
+                                  LargeGlyph="pack://application:,,,/Images/bold32x32.png"
+                                  GlyphSize="Small"
+                                  CategoryName="Format Category"
+                                  />
+            </dxb:BarManager.Items>
+            
+            <!--Create a bar-->
+            <dxb:BarManager.Bars>
+                <dxb:Bar Caption="Format" x:Name="barFormat" >
+                    <dxb:Bar.DockInfo>
+                        <dxb:BarDockInfo ContainerType="Top" Row="0" />
+                    </dxb:Bar.DockInfo>
+                    <dxb:Bar.ItemLinks>
+                        <dxb:BarCheckItemLink BarItemName="checkBtnBold"/>
+                    </dxb:Bar.ItemLinks>
+                </dxb:Bar>
+            </dxb:BarManager.Bars>
+
+            <!--endregion #1-->
+            
+            <DockPanel Name="dockPanel1" LastChildFill="False">
+                <!--Create a BarContainerControl that will display bars at the top of the DockPanel-->
+                <dxb:BarContainerControl x:Name="TopBarContainer" DockPanel.Dock="Top" ContainerType="Top">
+                </dxb:BarContainerControl>
+                
+            </DockPanel>
+                
+
+        </dxb:BarManager>
+    </Grid>
+</Window>
