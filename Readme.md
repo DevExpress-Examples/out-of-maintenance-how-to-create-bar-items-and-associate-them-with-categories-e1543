@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [Window1.xaml](./CS/WpfApplication3/Window1.xaml) (VB: [Window1.xaml](./VB/WpfApplication3/Window1.xaml))
-* [Window1.xaml.cs](./CS/WpfApplication3/Window1.xaml.cs) (VB: [Window1.xaml](./VB/WpfApplication3/Window1.xaml))
+* [Window1.xaml.cs](./CS/WpfApplication3/Window1.xaml.cs) (VB: [Window1.xaml.vb](./VB/WpfApplication3/Window1.xaml.vb))
 <!-- default file list end -->
 # How to create bar items and associate them with categories
 
